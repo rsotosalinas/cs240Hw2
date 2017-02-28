@@ -47,4 +47,18 @@ public class LinkedStack<T> implements StackInterface<T>
 	public void clear(){
 		   topNode = null;
 	}
+	public T[] lookAll() {
+		@SuppressWarnings("unchecked")
+		T[] array = (T[])new Object[numberOfEntries];
+		int index = 0;
+		Node temp = topNode;
+		while(index < numberOfEntries && temp != null) {
+			array[index] = temp.data;
+			temp = temp.next;
+
+			index++;
+			
+		}
+			return array;
+    }
 } // end StackInterface
