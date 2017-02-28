@@ -28,7 +28,7 @@ public class LinkedStack<T> implements StackInterface<T>
 		
 		   first = topNode.data;
 		   topNode = topNode.next;
-		
+		   numberOfEntries--;
 	   return first;
 	}
 	 
